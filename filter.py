@@ -27,7 +27,7 @@ threshold = 90 # threshhold to filter at
 graduate = False # filter for non grad courses (500 or higher are grad courses)
 writeToFile = True # whether or not to write to file
 
-with open("2021W.json") as f: # paste data downloaded from https://ubcgrades.com/api/v2/grades/UBCV/2021W change last part to reflect the desired section
+with open("2021S.json") as f: # paste data downloaded from https://ubcgrades.com/api/v2/grades/UBCV/2021W change last part to reflect the desired section
     data = json.load(f)
     #print(data)
 
@@ -42,6 +42,6 @@ with open("2021W.json") as f: # paste data downloaded from https://ubcgrades.com
     print(classes)
 
     if writeToFile:
-        with open('2021W90PlusNonGrad.txt', 'w') as out: #writes to output file (change file name if parameters are changed)
+        with open('2021S90PlusNonGrad.txt', 'w') as out: #writes to output file (change file name if parameters are changed)
             for c in classes:
                 out.write("%s\n" % c)
